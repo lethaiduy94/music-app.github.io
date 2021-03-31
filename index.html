@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+<div class="main">
+    <p id="logo"><i class="fas fa-music">music</i></p>
+    <!--Left part-->
+    <div class="left">
+        <!--Song IMG-->
+        <img src="" alt="" id="track_image">
+        <div class="volume">
+
+        <p class="volume_show">90</p>
+        <i class="fa fa-volume-up" id="volume_icon" onclick="mute_sound()"></i>
+        
+        <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+    </div>
+    </div>
+    <!--Right part-->
+    <div class="right">
+        <div class="show_song_no">
+            <p id="present">1</p>
+            <p>/</p>
+            <p id="total">5</p>
+        </div>
+
+        <!--song title-->
+
+        <p id="title">title.mp3</p>
+        <p id="artist">Artist name</p>
+        <!--middle part-->
+        <div class="middle">
+            <button onclick="previous_song()" id="pre"><i class="fas fa-step-backward"></i></button>
+            <button onclick="justplay()" id="play"><i class="fas fa-play"></i></button>
+            <button onclick="next_song()" id="next"><i class="fas fa-step-forward"></i></button>
+        </div>
+
+        <!--song duration part-->
+        <div class="duration">
+            <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+        <button id="auto" onclick="autoplay_switch()">Auto play <i class="fas fa-circle-notch"></i></button>
+</div>
+</div>
+
+    <script src="javascripts/java.js"></script>
+</body>
+</html>
